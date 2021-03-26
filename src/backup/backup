@@ -1,0 +1,133 @@
+<template>
+  <v-app>
+    <v-main>
+      <bgimage class="bg"/>
+      <div class="inputForm">
+        <div class="url">
+          <urlField></urlField>
+        </div>
+        <div class="slider">
+          <slider></slider>
+        </div>
+    </div>
+    </v-main>
+  </v-app>
+</template>
+
+<script>
+import urlField from './components/text-field-url'
+import slider from './components/sample-slider'
+import bgimage from './components/background-image'
+
+export default {
+  name: 'App',
+  components: {
+    urlField,
+    slider,
+    bgimage
+  },
+  data: () => ({
+    //
+  }),
+};
+</script>
+
+<style lang="scss" scoped>
+
+.inputForm{
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.url, .slider, .bg {
+  position: absolute;
+}
+
+.bg {
+  z-index: 10;
+}
+
+.url{
+  flex: 0 0 35%;
+  z-index: 20;
+}
+.slider{
+  flex: 0 0 16%;
+  z-index: 20;
+}
+
+</style>
+
+
+=========================================================
+
+<template>
+  <v-app>
+    <v-main>
+      <div class="full-screen">
+        <bgimage class="bg">
+        <div class="inputForm">
+          <div class="url">
+            <urlField></urlField>
+          </div>
+          <div class="slider">
+            <slider></slider>
+          </div>
+        </div>
+      </bgimage>
+      </div>
+    </v-main>
+  </v-app>
+</template>
+
+<script>
+import urlField from './components/text-field-url'
+import slider from './components/sample-slider'
+import bgimage from './components/background-image'
+
+export default {
+  name: 'App',
+  components: {
+    urlField,
+    slider,
+    bgimage
+  },
+  data: () => ({
+    //
+  }),
+};
+</script>
+
+<style lang="scss" scoped>
+
+.full-screen {
+  position: relative;
+}
+
+.inputForm{
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bg {
+  z-index: 10;
+}
+
+.url{
+  flex: 0 0 35%;
+  z-index: 20;
+}
+.slider{
+  flex: 0 0 16%;
+  z-index: 20;
+}
+
+</style>
